@@ -2,6 +2,7 @@
 module.exports = {
   darkMode: ["class"],
   content: [
+    'index.html',
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
@@ -17,6 +18,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -58,6 +62,11 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+          fadeIn:{
+                '0%': {opacity:'0 ' , transform: 'translateY(-20px)'},
+                '100%': {opacity:'1', transform: 'translateY(0)'},
+          },
+
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
