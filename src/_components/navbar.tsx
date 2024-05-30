@@ -10,8 +10,11 @@ function Navbar() {
   return (
     <div className="flex items-center space-x-4">
       <img src={logo} alt="Erez Porat Logo" className="h-10" />
-      <NavigationMenu className="flex-1">
+      <NavigationMenu className="">
         <NavigationMenuList className="flex justify-center space-x-4">
+          <NavigationMenuItem>
+            <NavigationMenuTrigger><a href="#section0">Home</a></NavigationMenuTrigger>
+          </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger><a href="#section1">About</a></NavigationMenuTrigger>
           </NavigationMenuItem>
